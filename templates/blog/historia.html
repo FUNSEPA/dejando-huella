@@ -1,0 +1,98 @@
+{% extends "base/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<section id="historia" class="section" style="background: url('{% static "img/fotos/Funsepa-4.jpg" %}'); background-size: cover;">
+	<div class="layer">
+		<div class="container">
+			<div class="row no-margin">
+				<div class="col-md-7 col-md-offset-5 no-padding historias text-center">
+					<div class="historia">
+						<div class="historia-header">
+							<a class="btn btn-nav prev"><</a>
+							Parte <span id="slide">1</span> de 3
+							<a class="btn btn-nav next">></a>
+						</div>
+						<div class="col-sm-12 text-center-mobile">
+							<div class="progress progress-xs active">
+								<div class="progress-bar progress-bar-aqua progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+									<span class="sr-only">20% Complete</span>
+								</div>
+							</div>
+						</div>
+						<div class="owl-twitter owl-carousel">
+							<div class="item text-center post" data-slide="1" data-img="{% static "img/fotos/Funsepa-4.jpg" %}">
+								<h2 class="light">Somos José y ramiro</h2>
+								<p>
+									Hola, somos José y Ramiro. Estamos en quinto priamria sección B.
+								</p>
+								<p>
+									El año pasado hubo una inundación en la escuela y nuestro antiguo salón de clases quedó en muy malas condiciones. Nos pasaron a estudiar en una galera que antes se usaba como bodega, y ahí tenemos que pasar el resto del año. No tendríamos problema con eso... si no fuera porque hay muchos nidos de pájaros en el techo de nuestro nuevo salón. Esos pájaros suelen destruir todo lo que tenemos en el salón. Cuando llegamos en las mañanas , nuestros trabajos y proyectos que hemos dejado ahí están tirados en el piso y están todos rotos. Además, el lugar se llena de excremento de paloma y a veces nos ha caido encima cuando estamos recibiendo clases :(
+								</p>
+								<p>
+									Necesitamos construir una malla que cubra el techo del salón para que los pájaros dejen de entrar y podamos estudiar en paz. Esperamos que puedas ayudarnos a conseguir los fondos para conseguirla.
+								</p>
+								<p>
+									<div class="row">
+										<div class="col-md-8">
+											<div class="embed-responsive embed-responsive-16by9">
+												<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zkNGwBpQMts" frameborder="0" allowfullscreen></iframe>
+											</div>
+										</div>
+									</div>
+								</p>
+								<h5 class="light">Meta de recaudación</h5>
+								<h1 class="light">$250</h1>
+								<h3><button data-toggle="modal" data-target="#modal1" class="btn btn-blue">Ayudar</button></h3>
+							</div>
+							<div class="item text-center post" data-slide="2" data-img="{% static "img/fotos/Funsepa-8.jpg" %}">
+								<h2 class="light">¡100% Gracias!</h2>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</p>
+								<p>
+								<img src="{% static "img/foto.jpg" %}" class="img-responsive">
+								</p>
+							</div>
+							<div class="item text-center post" data-slide="3" data-img="{% static "img/fotos/4.jpg" %}">
+								<h3 class="light">Aún no puedes ver esta historia</h3>
+								<h6 class="light">Necesitamos recaudar más para llegar a este paso.</h6>
+								<h5 class="light">Desbloquea cuando lleguemos a 75% de la meta, o cuando dones un poco más.</h5>
+								<div class="progress xs">
+									<div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+								</div>
+								<h3><button data-toggle="modal" data-target="#modal1" class="btn btn-blue">Ayudar</button></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content modal-popup">
+			<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+			<h3 class="white">Donación</h3>
+			<form action="" class="popup-form">
+				<input type="number" class="form-control form-white" placeholder="Cantidad ($)">
+				<input type="text" class="form-control form-white" placeholder="Mensaje">
+				<div class="checkbox-holder text-left">
+					<div class="checkbox" checked="checked">
+						<input type="checkbox" value="None" id="squaredOne" name="check" />
+						<label for="squaredOne"><span>Entiendo que esta donación será descontada de mi planilla</label>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-submit">Donar!</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock content %}

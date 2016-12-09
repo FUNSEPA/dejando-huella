@@ -83,11 +83,10 @@ jQuery(function($) {
 		});
 
 		// Onepage Nav
-		$('.navbar.navbar-fixed-top .navbar-nav').onePageNav({
+		$('.scroll-link .navbar.navbar-fixed-top .navbar-nav').onePageNav({
 			currentClass: 'active',
 			changeHash: false,
 			scrollSpeed: 400,
-			filter: ':not(.btn)'
 		});
 	});
 	// Window Scroll
