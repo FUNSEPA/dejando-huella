@@ -1,3 +1,5 @@
 from django.contrib import admin
+from apps.dh_auth.models import *
 
-# Register your models here.
+
+admin.site.register(Perfil)

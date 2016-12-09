@@ -1,0 +1,138 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dejando huella</title>
+	<meta name="description" content="Cardio is a free one page template made exclusively for Codrops by Luka Cvetinovic" />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<!-- Favicons (created with http://realfavicongenerator.net/)-->
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static "img/favicons/apple-touch-icon-57x57.png" %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static "img/favicons/apple-touch-icon-60x60.png" %}">
+	<link rel="icon" type="image/png" href="{% static "img/favicons/favicon-32x32.png" sizes="32x32" %}">
+	<link rel="icon" type="image/png" href="{% static "img/favicons/favicon-16x16.png" sizes="16x16" %}">
+	<link rel="manifest" href="{% static "img/favicons/manifest.json" %}">
+	<link rel="shortcut icon" href="{% static "img/favicons/favicon.ico" %}">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/owl.css" %}">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.1.0/css/font-awesome.min.css" %}">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/eleganticons/et-icons.css" %}">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/cardio.css" %}">
+</head>
+
+<body>
+	<div class="preloader">
+		<img src="{% static "img/loader.gif" %}" alt="Cargando">
+	</div>
+	<nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="{% static "img/dh.png" %}" data-active-url="{% static "img/dh.png" %}" alt=""></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="#intro">Donar</a></li>
+					<li><a href="#services">Info</a></li>
+					<li><a href="#team">Contacto</a></li>
+					<li><a href="#pricing">Perfil</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	{% block content %}
+	{% endblock content %}
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Sigamos a la meta</h3>
+					<h5 class="light regular light-white">Falta 6 días para terminar.</h5>
+					<a href="#" class="btn btn-blue ripple trial-button">Todas las historias</a>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Título de historia <span class="open-blink"></span></h3>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+							<span class="">$275/$500</span>
+						</div>
+					</div>
+					<div class="row opening-hours">
+						<div class="col-sm-6 text-center-mobile">
+							<h5 class="light-white light">Finaliza</h5>
+							<h3 class="regular white">11-12-2016</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="white">La gran meta</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center-mobile">
+					<div class="progress progress-sm active">
+						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+							<span class="sr-only">20% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-8">
+					<p>&copy; 2016 All Rights Reserved by <a href="http://tympanus.net/codrops/">Funsepa</a></p>
+				</div>
+				<div class="col-sm-4 text-right text-center-mobile">
+					<ul class="social-footer">
+						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<ul>
+		</ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+	<script src="{% static "js/owl.carousel.min.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/wow.min.js" %}"></script>
+	<script src="{% static "js/typewriter.js" %}"></script>
+	<script src="{% static "js/jquery.onepagenav.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+</body>
+
+</html>

@@ -163,7 +163,9 @@ a {
 
 nav.navbar {
 	position: absolute;
-	background: white;
+	background: #0575E6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #021B79 , #0575E6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #021B79 , #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	z-index: 9500;
 	width: 100%;
 	width: 100vw;
@@ -172,7 +174,7 @@ nav.navbar {
 }
 
 nav.navbar .navbar-nav li a:not(.btn) {
-	color: #666;
+	color: #fff;
 }
 
 nav.navbar .navbar-nav li.active a:not(.btn) {
@@ -183,12 +185,14 @@ nav.navbar-fixed-top {
 	z-index: 9499;
 	top: 0;
 	opacity: 0;
-	background: white;
+	background: #0575E6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #021B79 , #0575E6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #021B79 , #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
 }
 
 nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
-	color: #bbb;
+	color: #fff;
 }
 
 .icon-bar {
@@ -736,11 +740,11 @@ footer .social-footer li:hover a {
 /* Form Control */
 
 .form-control {
-	font-size: 18px;
+	font-size: 14px;
 	position: relative;
 	left: 0;
 	height: auto;
-	padding: 20px 30px;
+	padding: 10px 20px;
 	border: 1px;
 	border-radius: 0;
 	box-shadow: 0;
@@ -1427,4 +1431,8 @@ footer .social-footer li:hover a {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #fff;
     background-color: rgba(27, 63, 149, 0.8);
+}
+
+.form-section {
+	padding-top: 70px;
 }

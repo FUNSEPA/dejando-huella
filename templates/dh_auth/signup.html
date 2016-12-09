@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+<section class="form-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form action="{{action}}" method="post">
+					{% csrf_token %}
+					{% for field in form %}
+					<div class="form-group">
+						{{ field.label_tag }}
+						{{ field|add_class:"form-control" }}
+					</div>
+					{% endfor %}
+					<input type="submit" value="Registrar">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}
