@@ -42,7 +42,15 @@ jQuery(function($) {
 		});
 		$('.owl-twitter').owlCarousel({
 			singleItem: true,
-			pagination: true
+			pagination: true,
+			autoHeight : true,
+			afterMove: function (elem) {
+				var current = this.currentItem;
+				var src = elem.find(".owl-item").eq(current).find(".post").data('img');
+				var slide = elem.find(".owl-item").eq(current).find(".post").data('slide');
+				$('#historia').css("background-image", "url("+src+")");
+				$('#slide').html(slide);
+			}
 		});
 		var owl = $('.owl-twitter').data('owlCarousel');
 		$(".next").click(function(){

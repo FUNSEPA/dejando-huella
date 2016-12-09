@@ -3,6 +3,7 @@ body {
 	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
+	padding-top: 70px
 	color: #2a3237;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -109,37 +110,37 @@ ul.white-list li:before {
 	background: white;
 }
 
-header {
+#intro {
 	position: relative;
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
+	background: url('../img/portada.JPG');
 	background-size: cover;
 }
 
-header .table {
+#intro .table {
 	display: table;
 	height: 100%;
 }
 
-header .container {
+#intro .container {
 	height: 100%;
 }
 
-header .header-text {
+#intro .header-text {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
 	color: white;
 }
 
-header .typed {
+#intro .typed {
 	display: inline-block;
 	margin: 0;
 }
 
-header .typed-cursor {
+#intro .typed-cursor {
 	font-size: 60px;
 	display: inline-block;
 	margin: 0 10px;
@@ -162,6 +163,7 @@ a {
 
 nav.navbar {
 	position: absolute;
+	background: white;
 	z-index: 9500;
 	width: 100%;
 	width: 100vw;
@@ -169,14 +171,17 @@ nav.navbar {
 	transition: all 0.3s ease;
 }
 
+nav.navbar .navbar-nav li a:not(.btn) {
+	color: #666;
+}
+
 nav.navbar .navbar-nav li.active a:not(.btn) {
-	color: #00a8ff !important;
+	color: #bbb;
 }
 
 nav.navbar-fixed-top {
 	z-index: 9499;
 	top: 0;
-	padding: 25px 0;
 	opacity: 0;
 	background: white;
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
@@ -230,7 +235,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 .btn.btn-white-fill {
 	color: #fff;
 	border-color: #fff;
-	background: transparent;
+	background: rgba(3, 3, 3, 0.2);
 }
 
 .btn.btn-white-fill:hover {
@@ -249,6 +254,11 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	background: #bbb;
 }
 
+.btn-nav {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
 /* Blink Cursor */
 
 .blink {
@@ -259,10 +269,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	height: 50px;
 	height: 5vh;
 	margin: 0 10px;
-}
-
-.navbar {
-	top: 50px;
 }
 
 .container {
@@ -636,11 +642,27 @@ section {
 	margin-top: 50px;
 }
 
+.owl-twitter .owl-item{
+    position: relative;
+    height:600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .owl-twitter i.icon {
 	font-size: 36px;
 	margin-bottom: 60px;
 	color: white;
 }
+
+.owl-twitter .owl-controls {
+	margin-top: 5px;
+	padding-top: 10px;
+	background: #1b3f95; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #1b3f95 , #24b34b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #1b3f95 , #24b34b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 /* Footer */
 
 footer {
@@ -1100,7 +1122,309 @@ footer .social-footer li:hover a {
 	}
 }
 
+/*
+ * Component: Progress Bar
+ * -----------------------
+ */
+.progress,
+.progress > .progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress,
+.progress > .progress-bar,
+.progress .progress-bar,
+.progress > .progress-bar .progress-bar {
+  border-radius: 1px;
+}
+/* size variation */
+.progress.sm,
+.progress-sm {
+  height: 10px;
+}
+.progress.sm,
+.progress-sm,
+.progress.sm .progress-bar,
+.progress-sm .progress-bar {
+  border-radius: 1px;
+}
+.progress.xs,
+.progress-xs {
+  height: 7px;
+}
+.progress.xs,
+.progress-xs,
+.progress.xs .progress-bar,
+.progress-xs .progress-bar {
+  border-radius: 1px;
+}
+.progress.xxs,
+.progress-xxs {
+  height: 3px;
+}
+.progress.xxs,
+.progress-xxs,
+.progress.xxs .progress-bar,
+.progress-xxs .progress-bar {
+  border-radius: 1px;
+}
+/* Vertical bars */
+.progress.vertical {
+  position: relative;
+  width: 30px;
+  height: 200px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.progress.vertical > .progress-bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.progress.vertical.sm,
+.progress.vertical.progress-sm {
+  width: 20px;
+}
+.progress.vertical.xs,
+.progress.vertical.progress-xs {
+  width: 10px;
+}
+.progress.vertical.xxs,
+.progress.vertical.progress-xxs {
+  width: 3px;
+}
+.progress-group .progress-text {
+  font-weight: 600;
+}
+.progress-group .progress-number {
+  float: right;
+}
+/* Remove margins from progress bars when put in a table */
+.table tr > td .progress {
+  margin: 0;
+}
+.progress-bar-light-blue,
+.progress-bar-primary {
+  background-color: #3c8dbc;
+}
+.progress-striped .progress-bar-light-blue,
+.progress-striped .progress-bar-primary {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-green,
+.progress-bar-success {
+  background-color: #00a65a;
+}
+.progress-striped .progress-bar-green,
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-aqua,
+.progress-bar-info {
+  background-color: #00c0ef;
+}
+.progress-striped .progress-bar-aqua,
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-yellow,
+.progress-bar-warning {
+  background-color: #f39c12;
+}
+.progress-striped .progress-bar-yellow,
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-red,
+.progress-bar-danger {
+  background-color: #dd4b39;
+}
+.progress-striped .progress-bar-red,
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
 
+/* Historia */
 
+#historia {
+	position:relative; /* needed for footer positioning*/
+	height:auto !important; /* real browsers */
+	min-height:100%; /* real browsers */
+	font-family: font-family: 'Roboto', sans-serif;
+	background: #00a8ff url('../img/historia1.jpg') no-repeat center center;
+	padding-bottom: 0px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #000;
+	-webkit-transition: background-image 0.6s linear 0.3s;
+	transition: background-image 0.6s linear 0.3s;
 
+}
 
+.owl-historia img {
+	width: 100%;
+}
+
+.owl-historia,
+.historias {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.historia {
+	position: relative;
+	width: 100%;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 6px 1px rgba(35,35,35,0.4);
+	-moz-box-shadow: 0px 0px 6px 1px rgba(35,35,35,0.4);
+	box-shadow: 0px 0px 6px 1px rgba(35,35,35,0.4);
+}
+
+.historia p {
+	text-align: left;
+	font-size: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #555;
+}
+
+.post {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.post h2 {
+	padding-top: 5px;
+}
+
+.historia .historia-header {
+	color: #fff;
+	font-size: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #1b3f95; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #1b3f95 , #24b34b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #1b3f95 , #24b34b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	vertical-align: middle;
+}
+
+.historia .historia-header .next {
+	
+}
+
+.historias .historia .box-main,
+.historias .historia .box-second {
+	position: relative;
+	left: 25%;
+	display: inline-block;
+	width: 50%;
+	height: 300px;
+	padding: 50px 40px;
+	background: #bbb;
+	-webkit-transition: -webkit-transform 0.3s, background-image 0.3s, opacity 0.3s;
+	transition: transform 0.3s, background-image 0.3s, opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.historias .historia .box-main {
+	z-index: 10;
+	padding-top: 40px;
+}
+
+.historias .historia .box-main:not(.active) {
+	cursor: pointer;
+}
+
+.historias .historia .box-main .info-icon {
+	font-size: 14px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	pointer-events: none;
+	opacity: 0;
+	color: #fff;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.historias .historia .box-main:not(.active) .info-icon {
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.historias .historia .box-main:not(.active):hover {
+	background: #afafaf;
+}
+
+.historias .historia .box-main.active {
+	background: #00a8ff;
+	-webkit-transform: translateX(-99%);
+	-ms-transform: translateX(-99%);
+	transform: translateX(-99%);
+}
+
+.historias .historia .box-second {
+	position: absolute;
+	top: 0;
+	right: 0% !important;
+	left: auto;
+	opacity: 0;
+	background: #afafaf;
+}
+
+.historias .historia .box-second.active {
+	opacity: 1;
+	background: #00a8ff;
+}
+
+.historias .historia.active .box-main,
+.historias .historia .box-second {
+	background: #00a8ff;
+}
+
+.historias .historia .box-main a.btn {
+	margin-top: 50px;
+}
+
+.post .blocked {
+	vertical-align: middle;
+}
+
+.layer {
+	background: -webkit-linear-gradient(to left, rgba(36, 179, 75, 0.1) , rgba(2,2,2,0)); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, rgba(36, 179, 75, 0.1) , rgba(2,2,2,0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.historia-nav {
+	background: rgba(27, 63, 149, 0.4);
+}
+
+.historia-nav li:not(:last-child) {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.historia-nav a {
+	color: white;
+}
+
+.historia-nav li.active {
+	background: rgba(27, 63, 149, 0.8);
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: rgba(27, 63, 149, 0.8);
+}
